@@ -1,0 +1,63 @@
+<!-- Example row of columns -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+        	<div class="col-md-12">
+        		<div class="card">
+					  <div class="card-header">
+					    Busqueda
+					  </div>
+					  <div class="card-body">
+					    <form role="form" method="POST" action="registro.php">
+							<div class="form-group">
+							   <label>Nombre *</label>
+							   <input type= "text" class="form-control" id="ImputUsuario" name="usuario" placeholder="abc123"> 
+							</div> 
+							<div class="form-group">
+							  <label>Correo electronico *</label>
+							  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="direccion@hotmail.com">
+							  <small id="emailHelp" class="form-text text-muted">Ingrese correo electronico valido.</small>
+							</div>
+							<div class="form-group">
+							  <label>Telefono celular *</label>
+							  <input type="password" class="form-control" id="exampleInputPassword1" name="clave1">
+							  <small id="number" class="form-text text-muted"></small>
+							</div>
+							<div class="form-group">
+							  <label>Telefono fijo *</label>
+							  <input type="number" class="form-control" id="InputPassword1" name="clave2">
+							</div>
+							<div class="form-group">
+							  <label>Empresa *</label>
+							  <input type="text" class="form-control" id="InputPostalCode" name="code">
+							  
+							</div>
+							<div class="form-group">
+							  <label for="exampleFormControlTextarea1">Mensaje</label>
+							  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+							<div>
+							  <button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						  </form>
+					  </div>
+				</div>
+        	</div>
+        </div>
+        <br>
+        
+    </div>
+    <div class="col-md-8">
+        		<div class="card">
+        			<div class="card-header">
+        				Ultimas Entradas
+        			</div>
+        			<div class="card-body">
+        				<p class="card-text">Todavia no hay entradas que mostrar</p>
+        			</div>
+        		</div>
+    </div>
+    <br>
+  </div> <!-- /container -->
+  <br>

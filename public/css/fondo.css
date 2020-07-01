@@ -1,0 +1,61 @@
+body{
+ background-image: url("../img/ Imagen");
+  
+}
+
+.jumbotron{
+   background-color: crimson;
+   color: ghostwhite;
+   
+}
+
+.panel-heading{
+    background-color: crimson !important;
+    color: ghostwhite;
+}
+
+.panel-body{
+    background-color: black;
+
+}
+
+.navbar-brand{
+
+}
+
+ .navbar-brand:link, .navbar-brand:visited{
+  color: deepskyblue !important;
+}
+
+.navbar-brand:hover, .navbar-brand:active{
+  color: white !important;
+}
+
+
+.div p{
+  
+}
+#navbar li a:link, #navbar li a:visited{
+ color: white !important;
+}
+
+#navbar li a:hover, #navbar li a:active{
+color: deepskyblue !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

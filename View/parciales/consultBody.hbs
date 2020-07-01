@@ -1,0 +1,122 @@
+ <body>
+
+
+    <!--START NAVBAR-->
+      
+      {{> navbar}}
+
+      <!--END NAVBAR -->
+
+ <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Busqueda
+                        </div>
+                        <div class="card-body">
+                               <!--
+                                El siguiente formulario envía una solicitud: "POST", con un tipo de datos: "application/x-www-form-urlencoded"
+                                a la ruta: "/email/add" del host o dominio.
+                                -->
+                            <form id="contacto" action="/email/add" enctype="application/x-www-form-urlencoded" method="post">
+                                <div class="form-group">
+                                <label>Nombre *</label>
+                                <input type= "text" class="form-control" id="ImputUsuario" name="nombre"> 
+                                </div> 
+                                <div class="form-group">
+                                <label>Correo electronico*</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                                <small id="emailHelp" class="form-text text-muted">Ingrese correo electronico valido.</small>
+                                </div>
+                                <div class="form-group">
+                                <label>Telefono celular*</label>
+                                <input type="number" class="form-control" id="exampleInputPassword1" name="telefonoCelular">
+                                <small id="number" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group">
+                                <label>Telefono fijo*</label>
+                                <input type="number" class="form-control" id="InputPassword1" name="telefonoFijo">
+                                </div>
+                                <div class="form-group">
+                                <label>Empresa*</label>
+                                <input type="text" class="form-control" id="InputPostalCode" name="empresa">
+                                
+                                </div>
+                                <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Mensaje</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Examinar</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="archivo">
+                                </div>
+                                <div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+        </div>
+        <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Direccion 
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Todavia no hay entradas que mostrar</p>
+                        </div>
+                </div>
+                <!---->
+                <br>
+                <div class="card">
+                        <div class="card-header">
+                            Telefono y Fax
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Todavia no hay entradas que mostrar</p>
+                        </div>
+                </div>
+                <br>
+                <!----->
+                <div class="card">
+                        <div class="card-header">
+                            Horario de atencion
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Todavia no hay entradas que mostrar</p>
+                        </div>
+                </div>
+                <br>
+                <!---->
+
+                <div class="card">
+                        <div class="card-header">
+                            Correo Electronico
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Todavia no hay entradas que mostrar</p>
+                        </div>
+                </div>
+                
+                <!----->
+        </div>
+        <br>
+    </div> <!-- /container -->
+
+  
+		<!-- FOOTER -->  
+             {{> footer}}
+        <!--END THE FOOTER-->
+
+       <!--JS-->
+             {{> scripts }}
+       <!--END THE JS-->
+
+    </body>

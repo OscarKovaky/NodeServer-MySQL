@@ -1,0 +1,12 @@
+ /*estilo de fondo*/
+body {
+ background: #d3d3d3;
+ font-size: 100%;
+ margin: 10px;
+ font-family:tahoma;
+ color: #444;
+}
+/* Estilo para el articulo */
+article{
+ max-width:400px;
+}
