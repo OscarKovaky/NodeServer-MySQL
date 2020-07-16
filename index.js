@@ -1,17 +1,35 @@
 
-const webServer = require('./services/webserver')
+const {webServer} = require('./services/webserver')
+const {checkDB} = require('./services/database')
 
 const  startup = async()  => {
         console.log('Inicializando la aplicación');
     try {
-        console.log('Initializing web server module');
+        console.log('Initializing web server module and db');
 
-        await webServer.main()
+        await webServer()
+       
+
     } catch (err) {
         console.error(err);
         console.log('Algo no anda bien ')
         process.exit(1); // Non-zero failure code
     }
+
+
+    try {
+      console.log('Initializing database module');
+
+      await checkDB()
+      
+  } catch (err) {
+      console.error(err);
+
+      process.exit(1); // Non-zero failure code
+
+      
+  } 
+    
 }
 
 startup();
