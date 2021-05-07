@@ -13,6 +13,9 @@ const verificaForm = async(req,res,next)=>{
     form.push(forms)
       // podemos enviar el array de formulario, así por cada vez que accedemos a este
 
+
+
+
     if(!form) {
         return res.status(400).json({error: 'No hay datos a enviar, por favor verifique que no exista campo vacio'});
       }else{
