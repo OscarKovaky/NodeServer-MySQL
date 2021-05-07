@@ -1,6 +1,7 @@
 //-- importamos modulo que contiene nuetra  base de datos
 
-const producto = require('../models/producto')
+const { rest } = require('../services/database');
+
 //---------------------------------------------
 
 
@@ -19,31 +20,31 @@ const createItem = async(req, res, next)=>{
 
 //Listado de registros
 
-const listaItems = async(req, res, next)=>{
-    producto.find()
-    .exec()
-    .then(x => {
-        console.log(x)
-        res.status(201).send({x});
-    })
-  
-}
+const result = await rest.executeQuery(
+    'select * from your_table'
+);
+
+
 
 //Consulta
 
-const consultaItem  = async(req, res, next)=> {
-    producto.find()
-    .exec()
-    .then( x => {
-        console.log(x)
-        if (x.length>0) {
-            res.send('listadoconsulta',{articulos:x});
-        } else {
-            res.send('mensajearticulos',{mensaje:'No existe el codigo de articulo ingresado'});
-        }    
-    })           
-  }
-
+// how to execute a query with parameters
+const result = await rest.executeQuery(
+    `
+        select 
+            *
+        from your_table 
+        where (
+            @id = 0 or id_id = @id
+        )
+        `,
+        [{
+            name: 'id',
+            type: 'Int',
+            value: 1
+        }]
+    );
+    
 //Modificacion
 
 const modificarItem= async(req,res,next)=>{

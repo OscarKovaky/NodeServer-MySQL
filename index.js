@@ -1,6 +1,6 @@
 
 const {webServer} = require('./services/webserver')
-const {checkDB} = require('./services/database')
+const {result, success} = require('./services/database')
 
 const  startup = async()  => {
         console.log('Inicializando la aplicación');
@@ -20,7 +20,9 @@ const  startup = async()  => {
     try {
       console.log('Initializing database module');
 
-      await checkDB()
+      
+
+      await success()
       
   } catch (err) {
       console.error(err);
